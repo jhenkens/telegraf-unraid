@@ -1,8 +1,8 @@
-Cmnd_Alias SMARTCTL = /usr/bin/smartctl
+Cmnd_Alias SMARTCTL = /usr/sbin/smartctl
 telegraf  ALL=(ALL) NOPASSWD: SMARTCTL
 Defaults!SMARTCTL !logfile, !syslog, !pam_session
 
 # For nvme-cli add the following lines:
-Cmnd_Alias NVME = /path/to/nvme
+Cmnd_Alias NVME = /usr/sbin/nvme
 telegraf  ALL=(ALL) NOPASSWD: NVME
 Defaults!NVME !logfile, !syslog, !pam_session
